@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "postman-request": "^2.88.1-postman.32"
+  },
+  "name": "weather-app",
+  "description": "\"# weather-app\"",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arturRDC/weather-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arturRDC/weather-app/issues"
+  },
+  "homepage": "https://github.com/arturRDC/weather-app#readme"
+}
