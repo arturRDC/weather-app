@@ -5,17 +5,17 @@ const locationQuery = process.argv[2]
 if (!locationQuery) {
   return console.log('Error. Please input a location.')
 } else {
-  geocode(locationQuery, (error, data) => {
+  geocode(locationQuery, (error, { latitude, longitude, location } = {}) => {
     if (error) {
       return console.log(error)
     }
 
-    forecast(data.latitude, data.longitude, (error, forecastData) => {
+    forecast(latitude, longitude, (error, forecastData) => {
       if (error) {
         return console.log(error)
       }
 
-      console.log(data.location)
+      console.log(location)
       console.log(forecastData)
     })
   })

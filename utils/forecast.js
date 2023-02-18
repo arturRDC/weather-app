@@ -5,18 +5,17 @@ const forecast = (lat, long, callback) => {
   const wsAccessKey = process.env.WEATHERSTACK_ACCESS_KEY
   const latLong = encodeURIComponent(`${lat},${long}`)
   const tempUnit = 'm'
-  const urlWeather = `http://api.weatherstack.com/current?access_key=${wsAccessKey}&query=${latLong}&units=${tempUnit}`
+  const url = `http://api.weatherstack.com/current?access_key=${wsAccessKey}&query=${latLong}&units=${tempUnit}`
 
-  request({ url: urlWeather, json: true }, (error, response) => {
+  request({ url, json: true }, (error, { body }) => {
     if (error) {
       callback('Error. Failed to connect to weather API', undefined)
-    } else if (response.body.error) {
+    } else if (body.error) {
       callback('Error. Failed to find location', undefined)
     } else {
-      const current = response.body.current
-      const temperature = current.temperature
-      const feelsLike = current.feelslike
-      const weatherDesc = current.weather_descriptions[0]
+      const temperature = body.current.temperature
+      const feelsLike = body.current.feelslike
+      const weatherDesc = body.current.weather_descriptions[0]
 
       callback(
         undefined,
