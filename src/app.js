@@ -41,7 +41,8 @@ app.get('/help', (req, res) => {
   res.render('help', {
     title: 'Help',
     name,
-    helpMessage: 'this is a help message',
+    helpMessage:
+      'To use the app, please provide an address in the input box. Clicking search will display the weather data for that location',
   })
 })
 
