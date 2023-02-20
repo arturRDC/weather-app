@@ -3,12 +3,14 @@ body {
   font-family: arial;
   max-width: 650px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 12px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 header {
-  margin-top: 16px;
-  margin-bottom: 48px;
+  margin: 16px 0 48px 0;
 }
 
 footer {
@@ -23,11 +25,19 @@ h1 {
   margin-bottom: 16px;
 }
 
-header a {
+header a,
+footer a {
   color: #888888;
   margin-right: 16px;
   text-decoration: none;
 }
 .about-img {
   width: 250px;
+}
+.main-container {
+  flex-grow: 1;
+  border-radius: 4px;
+}
+footer img {
+  width: 20px;
 }
