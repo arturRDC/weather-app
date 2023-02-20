@@ -10,7 +10,8 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "start": "node src/app.js"
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js -e js,hbs"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/arturRDC/weather-app/issues"
   },
-  "homepage": "https://github.com/arturRDC/weather-app#readme"
+  "homepage": "https://github.com/arturRDC/weather-app#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
 }
