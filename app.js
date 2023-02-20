@@ -1,11 +1,11 @@
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
-const locationQuery = process.argv[2]
-if (!locationQuery) {
+const addressQuery = process.argv[2]
+if (!addressQuery) {
   return console.log('Error. Please input a location.')
 } else {
-  geocode(locationQuery, (error, { latitude, longitude, location } = {}) => {
+  geocode(addressQuery, (error, { latitude, longitude, location } = {}) => {
     if (error) {
       return console.log(error)
     }
