@@ -1,5 +1,3 @@
-console.log('js file loaded')
-
 const firstParagraph = document.querySelector('#first-paragraph')
 const secondParagraph = document.querySelector('#second-paragraph')
 
